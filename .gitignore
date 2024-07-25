@@ -1,3 +1,6 @@
+# Jars
+*.jar
+
 # Built application files
 *.apk
 *.aar
