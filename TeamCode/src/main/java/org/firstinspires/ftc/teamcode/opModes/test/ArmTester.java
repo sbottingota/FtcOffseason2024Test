@@ -1,8 +1,8 @@
 package org.firstinspires.ftc.teamcode.opModes.test;
 
+import com.arcrobotics.ftclib.command.CommandOpMode;
 import com.arcrobotics.ftclib.gamepad.GamepadEx;
 import com.arcrobotics.ftclib.gamepad.GamepadKeys;
-import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 import org.firstinspires.ftc.teamcode.subsystems.arm.ArmLowerCommand;
@@ -10,19 +10,13 @@ import org.firstinspires.ftc.teamcode.subsystems.arm.ArmRaiseCommand;
 import org.firstinspires.ftc.teamcode.subsystems.arm.ArmSubsystem;
 
 @TeleOp
-public class ArmTester extends OpMode {
-    private ArmSubsystem arm;
-    private GamepadEx gamepad;
+public class ArmTester extends CommandOpMode {
     @Override
-    public void init() {
-        arm = new ArmSubsystem(hardwareMap, "arm_motor", "arm_limit_switch", 1000, 0);
+    public void initialize() {
+        ArmSubsystem arm = new ArmSubsystem(hardwareMap, "arm_motor", "arm_limit_switch");
+        register(arm);
 
-        gamepad = new GamepadEx(gamepad1);
-    }
-
-    @Override
-    public void loop() {
-        gamepad.readButtons();
+        GamepadEx gamepad = new GamepadEx(gamepad1);
 
         gamepad.getGamepadButton(GamepadKeys.Button.DPAD_UP).whenPressed(new ArmRaiseCommand(arm));
         gamepad.getGamepadButton(GamepadKeys.Button.DPAD_DOWN).whenPressed(new ArmLowerCommand(arm));
