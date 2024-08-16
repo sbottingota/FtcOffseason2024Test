@@ -4,9 +4,9 @@ import com.arcrobotics.ftclib.command.CommandOpMode;
 import com.arcrobotics.ftclib.gamepad.GamepadEx;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-import org.firstinspires.ftc.teamcode.subsystems.deposit.DepositCloseCommand;
-import org.firstinspires.ftc.teamcode.subsystems.deposit.DepositOpenCommand;
-import org.firstinspires.ftc.teamcode.subsystems.deposit.DepositSubsystem;
+import org.firstinspires.ftc.teamcode.components.deposit.DepositCloseCommand;
+import org.firstinspires.ftc.teamcode.components.deposit.DepositOpenCommand;
+import org.firstinspires.ftc.teamcode.components.deposit.DepositSubsystem;
 import org.firstinspires.ftc.teamcode.util.inputs.PSButtons;
 
 @TeleOp

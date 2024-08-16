@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode.subsystems.deposit;
+package org.firstinspires.ftc.teamcode.components.deposit;
 
 import com.arcrobotics.ftclib.command.CommandBase;
 

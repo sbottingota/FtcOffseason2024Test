@@ -5,9 +5,9 @@ import com.arcrobotics.ftclib.gamepad.GamepadEx;
 import com.arcrobotics.ftclib.gamepad.GamepadKeys;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-import org.firstinspires.ftc.teamcode.subsystems.arm.ArmLowerCommand;
-import org.firstinspires.ftc.teamcode.subsystems.arm.ArmRaiseCommand;
-import org.firstinspires.ftc.teamcode.subsystems.arm.ArmSubsystem;
+import org.firstinspires.ftc.teamcode.components.arm.ArmLowerCommand;
+import org.firstinspires.ftc.teamcode.components.arm.ArmRaiseCommand;
+import org.firstinspires.ftc.teamcode.components.arm.ArmSubsystem;
 
 @TeleOp
 public class ArmTester extends CommandOpMode {
