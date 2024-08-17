@@ -20,7 +20,7 @@ import org.firstinspires.ftc.teamcode.components.intake.IntakeSubsystem;
 import org.firstinspires.ftc.teamcode.util.inputs.PSButtons;
 
 @TeleOp
-public class Teleop extends CommandOpMode {
+public class GenericTeleOp extends CommandOpMode {
     @Override
     public void initialize() {
         GamepadEx gamepad = new GamepadEx(gamepad1);
