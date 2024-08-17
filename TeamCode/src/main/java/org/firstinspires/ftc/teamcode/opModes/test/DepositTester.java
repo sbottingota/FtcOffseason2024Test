@@ -17,7 +17,8 @@ public class DepositTester extends CommandOpMode {
         register(deposit);
         GamepadEx gamepad = new GamepadEx(gamepad1);
 
-        gamepad.getGamepadButton(PSButtons.SQUARE).whenPressed(new DepositOpenCommand(deposit));
-        gamepad.getGamepadButton(PSButtons.CIRCLE).whenPressed(new DepositCloseCommand(deposit));
+        gamepad.getGamepadButton(PSButtons.SQUARE)
+                .whenPressed(new DepositOpenCommand(deposit))
+                .whenReleased(new DepositCloseCommand(deposit));
     }
 }

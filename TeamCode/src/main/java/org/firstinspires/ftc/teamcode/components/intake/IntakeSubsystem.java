@@ -11,15 +11,15 @@ public class IntakeSubsystem extends SubsystemBase {
         intakeMotor = new Motor(hw, intakeMotorId);
     }
 
-    public void forward() {
+    void forward() {
         intakeMotor.set(1);
     }
 
-    public void backward() {
+    void backward() {
         intakeMotor.set(-1);
     }
 
-    public void stop() {
+    void stop() {
         intakeMotor.set(0);
     }
 }

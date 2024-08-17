@@ -15,11 +15,11 @@ public class DepositSubsystem extends SubsystemBase {
         depositServo = new SimpleServo(hw, depositServoId, DEPOSIT_CLOSED_POSITION, DEPOSIT_OPEN_POSITION);
     }
 
-    public void open() {
+    void open() {
         depositServo.turnToAngle(DEPOSIT_OPEN_POSITION);
     }
 
-    public void close() {
+    void close() {
         depositServo.turnToAngle(DEPOSIT_CLOSED_POSITION);
     }
 

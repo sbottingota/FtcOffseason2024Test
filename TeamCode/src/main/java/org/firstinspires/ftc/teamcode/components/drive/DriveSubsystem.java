@@ -25,7 +25,7 @@ public class DriveSubsystem extends SubsystemBase {
         this.gamepad = gamepad;
     }
 
-    public void drive() {
+    void drive() {
         this.drive.driveRobotCentric(gamepad.getLeftX(), gamepad.getLeftY(), gamepad.getRightX());
     }
 
